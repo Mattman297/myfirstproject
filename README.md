@@ -72,7 +72,9 @@ photos belong to the people who took them, so neither could be copied directly. 
 
 ## Customize
 
-- Colors: edit `--brand`, `--brand-dark`, `--brand-soft` in `styles.css`.
+- Colors: edit `--brand`, `--brand-dark`, `--brand-soft` in `styles.css`. Buttons use their
+  own `--btn` / `--btn-hover` tokens (currently near-black) — change those to recolour every
+  call-to-action at once.
 - Copy: all plain text in `index.html`.
 - Light theme only — the page renders the same regardless of the visitor's device setting.
 - Responsive: single-column below 820px, with the nav collapsing to a top-right dropdown

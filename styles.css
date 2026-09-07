@@ -10,6 +10,8 @@
   --brand: #0ea5b7;
   --brand-dark: #0b7f8d;
   --brand-soft: #dbf1f4;
+  --btn: #121212;
+  --btn-hover: #000000;
   --hero-top: #e9f8fb;
   --hero-bottom: #c2ebf1;
   --sun: rgba(251, 191, 36, .30);
@@ -75,10 +77,10 @@ a { color: inherit; text-decoration: none; }
   transition: transform .12s ease, background .12s ease, border-color .12s ease;
 }
 .btn:active { transform: translateY(1px); }
-.btn-primary { background: var(--brand); color: #fff; }
-.btn-primary:hover { background: var(--brand-dark); }
+.btn-primary { background: var(--btn); color: #fff; }
+.btn-primary:hover { background: var(--btn-hover); }
 .btn-ghost { background: transparent; border-color: var(--border); color: var(--text); }
-.btn-ghost:hover { border-color: var(--brand); color: var(--brand); }
+.btn-ghost:hover { border-color: var(--btn); color: var(--btn); }
 .btn-lg { padding: .9rem 1.6rem; font-size: 1rem; }
 .btn-block { width: 100%; }
 
@@ -191,6 +193,10 @@ a { color: inherit; text-decoration: none; }
   color: #fff;
   background: rgba(255, 255, 255, .16);
   backdrop-filter: blur(2px);
+}
+.hero .btn-primary {
+  border-color: rgba(255, 255, 255, .35);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .38);
 }
 .hero .btn-ghost {
   border-color: rgba(255, 255, 255, .55);
@@ -560,7 +566,7 @@ a { color: inherit; text-decoration: none; }
 .cta-inner { position: relative; z-index: 1; }
 .cta-band h2 { color: #fff; }
 .cta-inner p { color: rgba(255, 255, 255, .85); }
-.cta-band .btn-primary { background: #fff; color: var(--brand-dark); }
+.cta-band .btn-primary { background: #fff; color: var(--btn); }
 .cta-band .btn-primary:hover { background: #eef2ff; }
 .cta-band .btn-ghost { border-color: rgba(255, 255, 255, .6); color: #fff; }
 .cta-band .btn-ghost:hover { border-color: #fff; background: rgba(255, 255, 255, .12); color: #fff; }
@@ -583,7 +589,7 @@ a { color: inherit; text-decoration: none; }
   max-width: 100%;
 }
 .signup input::placeholder { color: rgba(255, 255, 255, .7); }
-.signup .btn-primary { background: #fff; color: var(--brand-dark); }
+.signup .btn-primary { background: #fff; color: var(--btn); }
 .signup .btn-primary:hover { background: #eef2ff; }
 .form-msg { margin-top: 1rem; font-weight: 600; min-height: 1.2em; }
 .cta-alt { margin-top: 1rem; font-size: .9rem; color: rgba(255, 255, 255, .85); }
