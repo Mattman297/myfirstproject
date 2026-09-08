@@ -24,20 +24,26 @@
       <a href="#top" class="brand" aria-label="Aruba Wakeboard School — home">
         <img src="aws-logo.png" alt="Aruba Wakeboard School" class="brand-logo" width="305" height="200" />
       </a>
-      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-drawer">
+      <button class="nav-toggle" aria-label="Menu" data-i18n-al="nav_menu" aria-expanded="false" aria-controls="nav-drawer">
         <span></span><span></span><span></span>
       </button>
       <div class="nav-drawer" id="nav-drawer">
         <nav class="nav" aria-label="Primary">
-          <a href="#lessons">Lessons</a>
-          <a href="#photos">Photos</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#faq">FAQ</a>
+          <a href="#lessons" data-i18n="nav_lessons">Lessons</a>
+          <a href="#how" data-i18n="nav_how">How it works</a>
+          <a href="#reviews" data-i18n="nav_reviews">Reviews</a>
+          <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
+          <a href="#faq" data-i18n="nav_faq">FAQ</a>
         </nav>
         <div class="header-actions">
           <a href="tel:+2977313297" class="btn btn-ghost">+297 731 3297</a>
-          <a href="#book" class="btn btn-primary">Book a session</a>
+          <a href="#book" class="btn btn-primary" data-i18n="btn_book">Book a session</a>
+        </div>
+        <div class="lang-switch" role="group" aria-label="Language / Taal / Idioma">
+          <span class="lang-thumb" aria-hidden="true"></span>
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="nl" aria-pressed="false">NL</button>
+          <button type="button" data-lang="es" aria-pressed="false">ES</button>
         </div>
       </div>
     </div>
@@ -46,47 +52,31 @@
   <main>
     <section class="hero">
       <div class="container hero-inner">
-        <p class="eyebrow">Bucutiweg, Oranjestad · Aruba</p>
-        <h1><em>The</em> wakeboard school on the island</h1>
-        <p class="lede">
+        <a class="eyebrow" href="https://www.google.com/maps/search/?api=1&amp;query=Pure+Diving+Aruba" target="_blank" rel="noopener" data-i18n="hero_location">Bucutiweg, Oranjestad · Aruba</a>
+        <h1 data-i18n="hero_h1"><em>The</em> wakeboard school on the island</h1>
+        <p class="lede" data-i18n="hero_lede">
           Founded in 2008, Aruba Wakeboard School (AWS) runs private lessons in the calm, warm
           water off Oranjestad. First-timers to advanced riders — head instructor Edirik gets you up
           and riding in a single 30-minute session. The place to push your limits.
         </p>
         <div class="hero-cta">
-          <a href="#book" class="btn btn-primary btn-lg">Book a session</a>
-          <a href="#lessons" class="btn btn-ghost btn-lg">See lesson options</a>
+          <a href="#book" class="btn btn-primary btn-lg" data-i18n="btn_book">Book a session</a>
+          <a href="#lessons" class="btn btn-ghost btn-lg" data-i18n="hero_cta_options">See lesson options</a>
         </div>
-        <p class="hero-note">30-minute sessions · $50 per person · Open Saturdays &amp; Sundays</p>
-        <div class="hero-panel" aria-hidden="true">
-          <div class="hero-panel-bar">
-            <span></span><span></span><span></span>
-          </div>
-          <div class="hero-panel-body">
-            <div class="hp-col">
-              <div class="hp-card">Single session <em>30 min · $50</em></div>
-              <div class="hp-card">Wakeboard <em>All levels</em></div>
-              <div class="hp-card">Waterski · Wakeskate <em>Also on offer</em></div>
-            </div>
-            <div class="hp-col">
-              <div class="hp-card ghost">Boards &amp; vests provided</div>
-              <div class="hp-card ghost">Photos of your session</div>
-            </div>
-          </div>
-        </div>
+        <p class="hero-note" data-i18n="hero_note">30-minute sessions · $50 per person · Open Saturdays &amp; Sundays</p>
       </div>
     </section>
 
     <section class="logos" aria-label="Highlights">
       <div class="container">
-        <p class="logos-label">Why ride with us</p>
+        <p class="logos-label" data-i18n="why_label">Why ride with us</p>
         <ul class="logos-row">
-          <li>Since 2008</li>
-          <li>5.0 on Tripadvisor</li>
-          <li>Flat-water bay</li>
-          <li>All levels</li>
-          <li>MasterCraft boat</li>
-          <li>Local crew</li>
+          <li data-i18n="why_1">Since 2008</li>
+          <li data-i18n="why_2">5.0 on Tripadvisor</li>
+          <li data-i18n="why_3">Flat-water bay</li>
+          <li data-i18n="why_4">All levels</li>
+          <li data-i18n="why_5">MasterCraft boat</li>
+          <li data-i18n="why_6">Local crew</li>
         </ul>
       </div>
     </section>
@@ -94,39 +84,39 @@
     <section class="features" id="lessons">
       <div class="container">
         <div class="section-head">
-          <h2>Lessons for every level</h2>
-          <p>Whether you've never touched a board or you're dialing in your first invert.</p>
+          <h2 data-i18n="feat_head_h2">Lessons for every level</h2>
+          <p data-i18n="feat_head_p">Whether you've never touched a board or you're dialing in your first invert.</p>
         </div>
         <div class="feature-grid">
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">🌊</div>
-            <h3>First-timers</h3>
-            <p>Land your first ride. We cover body position, the deep-water start, and edging — most people are up within their first 30-minute session.</p>
+            <h3 data-i18n="feat_1_h">First-timers</h3>
+            <p data-i18n="feat_1_p">Land your first ride. We cover body position, the deep-water start, and edging — most people are up within their first 30-minute session.</p>
           </article>
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">🏄</div>
-            <h3>Intermediate instruction</h3>
-            <p>Carving, jumping the wake, and toeside riding. Video feedback between sets so you actually see the fix.</p>
+            <h3 data-i18n="feat_2_h">Intermediate instruction</h3>
+            <p data-i18n="feat_2_p">Carving, jumping the wake, and toeside riding, with hands-on correction between every set.</p>
           </article>
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">🚀</div>
-            <h3>Advanced &amp; tricks</h3>
-            <p>Wake-to-wake jumps, grabs, spins, and inverts with an instructor who rides at that level.</p>
+            <h3 data-i18n="feat_3_h">Advanced &amp; tricks</h3>
+            <p data-i18n="feat_3_p">Wake-to-wake jumps, grabs, spins, flips, and inverts with an instructor who rides at that level.</p>
           </article>
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">🎿</div>
-            <h3>More than wakeboarding</h3>
-            <p>We also instruct waterski, wakeskate, kneeboard, barefoot, and hydrofoil. Try something new on the same session.</p>
+            <h3 data-i18n="feat_4_h">More than wakeboarding</h3>
+            <p data-i18n="feat_4_p">We also instruct waterski, wakeskate, kneeboard, barefoot, and hydrofoil. Try something new on the same session.</p>
           </article>
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">🛥️</div>
-            <h3>MasterCraft &amp; gear included</h3>
-            <p>We pull behind a MasterCraft X-Star, with a full range of boards and Coast Guard-approved vests in every size.</p>
+            <h3 data-i18n="feat_5_h">MasterCraft &amp; gear included</h3>
+            <p data-i18n="feat_5_p">We pull behind a MasterCraft X-Star, with a full range of boards and Coast Guard-approved vests in every size.</p>
           </article>
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">👨‍👩‍👧</div>
-            <h3>Family &amp; groups</h3>
-            <p>Bring the crew. We rotate riders through the boat so everyone gets water time and shade in between.</p>
+            <h3 data-i18n="feat_6_h">Family &amp; groups</h3>
+            <p data-i18n="feat_6_p">Bring the crew. We rotate riders through the boat so everyone gets water time and shade in between.</p>
           </article>
         </div>
       </div>
@@ -135,84 +125,66 @@
     <section class="how" id="how">
       <div class="container">
         <div class="section-head">
-          <h2>How a session works</h2>
-          <p>From booking to riding in three easy steps.</p>
+          <h2 data-i18n="how_head_h2">How a session works</h2>
+          <p data-i18n="how_head_p">From booking to riding in three easy steps.</p>
         </div>
         <ol class="steps">
           <li>
             <span class="step-num">1</span>
-            <h3>Message us to book</h3>
-            <p>We ride Saturdays and Sundays, roughly 9am to 6pm. Send us a WhatsApp or email with the day and time you'd like.</p>
+            <h3 data-i18n="how_1_h">Message us to book</h3>
+            <p data-i18n="how_1_p">We ride Saturdays and Sundays, roughly 9am to 6pm. Send us a WhatsApp or email with the day and time you'd like.</p>
           </li>
           <li>
             <span class="step-num">2</span>
-            <h3>Meet us at Bucutiweg</h3>
-            <p>Find us at Bucutiweg, Oranjestad — search <strong>"Pure Diving Aruba"</strong> on Google Maps. Just bring swimwear, sunscreen, and a towel.</p>
+            <h3 data-i18n="how_2_h">Meet us at Bucutiweg</h3>
+            <p data-i18n="how_2_p">Find us at Bucutiweg, Oranjestad — search <strong>"Pure Diving Aruba"</strong> on Google Maps. Just bring swimwear, sunscreen, and a towel.</p>
           </li>
           <li>
             <span class="step-num">3</span>
-            <h3>Get on the water</h3>
-            <p>Short briefing on the boat, then you're riding for your 30-minute session. Instruction continues between every set.</p>
+            <h3 data-i18n="how_3_h">Get on the water</h3>
+            <p data-i18n="how_3_p">Short briefing on the boat, then you're riding for your 30-minute session. Instruction continues between every set.</p>
           </li>
         </ol>
-      </div>
-    </section>
-
-    <section class="gallery" id="photos">
-      <div class="container">
-        <div class="section-head">
-          <h2>On the water</h2>
-          <p>A look at what a session is like off Oranjestad. For the latest clips and
-            conditions, follow <a href="https://www.facebook.com/297AWS">@297AWS on Facebook</a>.</p>
-        </div>
-        <div class="shot-grid">
-          <figure class="shot shot-1"><figcaption>First ride of the day</figcaption></figure>
-          <figure class="shot shot-2"><figcaption>One-on-one from the boat</figcaption></figure>
-          <figure class="shot shot-3"><figcaption>Glassy water off Oranjestad</figcaption></figure>
-          <figure class="shot shot-4"><figcaption>Up on the first try</figcaption></figure>
-          <figure class="shot shot-5"><figcaption>Jumping the wake</figcaption></figure>
-          <figure class="shot shot-6"><figcaption>Our MasterCraft wake boat</figcaption></figure>
-        </div>
       </div>
     </section>
 
     <section class="reviews" id="reviews">
       <div class="container">
         <div class="section-head">
-          <h2>Riders love it here</h2>
-          <p>Rated <strong>5.0 / 5</strong> from <strong>118 reviews</strong> on Tripadvisor —
+          <h2 data-i18n="rev_head_h2">Riders love it here</h2>
+          <p data-i18n="rev_head_p">Rated <strong>5.0 / 5</strong> from <strong>118 reviews</strong> on Tripadvisor —
             first-timers and competitive riders alike.</p>
         </div>
         <div class="review-grid">
           <blockquote class="review-card">
-            <div class="stars" aria-label="Rated 5 out of 5">★★★★★</div>
-            <p>"Most other places just wanted your money and didn't care about you. AWS is different.
+            <div class="stars" aria-label="Rated 5 out of 5" data-i18n-al="stars_al">★★★★★</div>
+            <p data-i18n="rev_1_p">"Most other places just wanted your money and didn't care about you. AWS is different.
               He will teach you tricks that bring you to a higher level. I would recommend Aruba
               Wakeboard School to anyone without a doubt."</p>
-            <footer>kocoland · Granby, Canada</footer>
+            <footer data-i18n="rev_1_f">kocoland · Granby, Canada</footer>
           </blockquote>
           <blockquote class="review-card">
-            <div class="stars" aria-label="Rated 5 out of 5">★★★★★</div>
-            <p>"Not only do you actually learn how to wakeboard effectively, you'll have tons of fun
+            <div class="stars" aria-label="Rated 5 out of 5" data-i18n-al="stars_al">★★★★★</div>
+            <p data-i18n="rev_2_p">"Not only do you actually learn how to wakeboard effectively, you'll have tons of fun
               at the same time. You won't find a better place to wakeboard on the island."</p>
-            <footer>Cincyxile · Rotterdam, Netherlands</footer>
+            <footer data-i18n="rev_2_f">Cincyxile · Rotterdam, Netherlands</footer>
           </blockquote>
           <blockquote class="review-card">
-            <div class="stars" aria-label="Rated 5 out of 5">★★★★★</div>
-            <p>"I travel a lot for wakeboarding and also do competitions. Edirik really understands
+            <div class="stars" aria-label="Rated 5 out of 5" data-i18n-al="stars_al">★★★★★</div>
+            <p data-i18n="rev_3_p">"I travel a lot for wakeboarding and also do competitions. Edirik really understands
               the sport and gave me super tips that made me land a new trick. Highly recommend it
               for beginners and advanced riders."</p>
-            <footer>Frog900 · visiting rider</footer>
+            <footer data-i18n="rev_3_f">Frog900 · visiting rider</footer>
           </blockquote>
           <blockquote class="review-card">
-            <div class="stars" aria-label="Rated 5 out of 5">★★★★★</div>
-            <p>"Edirik was absolutely amazing. He guided us every step of the way and made us feel
+            <div class="stars" aria-label="Rated 5 out of 5" data-i18n-al="stars_al">★★★★★</div>
+            <p data-i18n="rev_4_p">"Edirik was absolutely amazing. He guided us every step of the way and made us feel
               comfortable from start to finish."</p>
-            <footer>Anais M. · recent visitor</footer>
+            <footer data-i18n="rev_4_f">Anais M. · recent visitor</footer>
           </blockquote>
         </div>
         <div class="reviews-cta">
-          <a class="btn btn-ghost" href="https://www.tripadvisor.com/Attraction_Review-g147248-d3316277-Reviews-Aruba_Wakeboard_School-Oranjestad_Aruba.html">Read all 118 reviews on Tripadvisor</a>
+          <a class="btn btn-ghost" href="https://www.tripadvisor.com/Attraction_Review-g147248-d3316277-Reviews-Aruba_Wakeboard_School-Oranjestad_Aruba.html" data-i18n="rev_cta">Read all 118 reviews on Tripadvisor</a>
         </div>
       </div>
     </section>
@@ -220,46 +192,46 @@
     <section class="pricing" id="pricing">
       <div class="container">
         <div class="section-head">
-          <h2>Sessions &amp; pricing</h2>
-          <p>All sessions are 30 minutes on the water. Boat, boards, vests, and fuel included.</p>
+          <h2 data-i18n="price_head_h2">Sessions &amp; pricing</h2>
+          <p data-i18n="price_head_p">All sessions are 30 minutes on the water. Boat, boards, vests, and fuel included.</p>
         </div>
         <div class="price-grid">
           <article class="plan plan-featured">
-            <p class="plan-badge">Most booked</p>
-            <h3>Single Session</h3>
-            <p class="price"><span>$50</span>/ person</p>
-            <p class="plan-desc">One 30-minute ride with an instructor.</p>
+            <p class="plan-badge" data-i18n="plan_badge">Most booked</p>
+            <h3 data-i18n="plan1_h">Single Session</h3>
+            <p class="price"><span>$50</span><span data-i18n="price_unit">/ person</span></p>
+            <p class="plan-desc" data-i18n="plan1_desc">One 30-minute ride with an instructor.</p>
             <ul>
-              <li>30 minutes on the water</li>
-              <li>1-on-1 instruction</li>
-              <li>Boards &amp; vests included</li>
-              <li>A few photos from the boat</li>
+              <li data-i18n="plan1_li1">30 minutes on the water</li>
+              <li data-i18n="plan1_li2">1-on-1 instruction</li>
+              <li data-i18n="plan1_li3">Boards &amp; vests included</li>
+              <li data-i18n="plan1_li4">Great for first-timers</li>
             </ul>
-            <a href="#book" class="btn btn-primary btn-block">Book a session</a>
+            <a href="#book" class="btn btn-primary btn-block" data-i18n="btn_book">Book a session</a>
           </article>
           <article class="plan">
-            <h3>3-Session Pack</h3>
-            <p class="price"><span>$135</span>/ person</p>
-            <p class="plan-desc">Save $15 — great for building real progress.</p>
+            <h3 data-i18n="plan2_h">3-Session Pack</h3>
+            <p class="price"><span>$135</span><span data-i18n="price_unit">/ person</span></p>
+            <p class="plan-desc" data-i18n="plan2_desc">Save $15 — great for building real progress.</p>
             <ul>
-              <li>Three 30-minute sessions</li>
-              <li>Video feedback between sets</li>
-              <li>All gear included</li>
-              <li>Photo gallery from each ride</li>
+              <li data-i18n="plan2_li1">Three 30-minute sessions</li>
+              <li data-i18n="plan2_li2">1-on-1 instruction each session</li>
+              <li data-i18n="plan2_li3">All gear included</li>
+              <li data-i18n="plan2_li4">Build real progress week to week</li>
             </ul>
-            <a href="#book" class="btn btn-ghost btn-block">Book the pack</a>
+            <a href="#book" class="btn btn-ghost btn-block" data-i18n="plan2_btn">Book the pack</a>
           </article>
           <article class="plan">
-            <h3>Group / Family</h3>
-            <p class="price"><span>$50</span>/ person</p>
-            <p class="plan-desc">Bring the crew — everyone gets their own 30 minutes.</p>
+            <h3 data-i18n="plan3_h">Group / Family</h3>
+            <p class="price"><span>$50</span><span data-i18n="price_unit">/ person</span></p>
+            <p class="plan-desc" data-i18n="plan3_desc">Bring the crew — everyone gets their own 30 minutes.</p>
             <ul>
-              <li>30 minutes on the water each</li>
-              <li>Rotating turns for the group</li>
-              <li>All gear &amp; sizes included</li>
-              <li>Shared photo gallery</li>
+              <li data-i18n="plan3_li1">30 minutes on the water each</li>
+              <li data-i18n="plan3_li2">Rotating turns for the group</li>
+              <li data-i18n="plan3_li3">All gear &amp; sizes included</li>
+              <li data-i18n="plan3_li4">Shade and seating between turns</li>
             </ul>
-            <a href="#book" class="btn btn-ghost btn-block">Book for a group</a>
+            <a href="#book" class="btn btn-ghost btn-block" data-i18n="plan3_btn">Book for a group</a>
           </article>
         </div>
       </div>
@@ -268,32 +240,32 @@
     <section class="faq" id="faq">
       <div class="container">
         <div class="section-head">
-          <h2>Good to know</h2>
+          <h2 data-i18n="faq_head_h2">Good to know</h2>
         </div>
         <div class="faq-list">
           <details>
-            <summary>Do I need any experience?</summary>
-            <p>None at all. Edirik has taught first-timers since 2008, and most people are up and riding within their first session. If you can swim and follow a few cues, you can wakeboard.</p>
+            <summary data-i18n="faq_q1">Do I need any experience?</summary>
+            <p data-i18n="faq_a1">None at all. Edirik has taught first-timers since 2008, and most people are up and riding within their first session. If you can swim and follow a few cues, you can wakeboard.</p>
           </details>
           <details>
-            <summary>When are you open?</summary>
-            <p>Saturdays and Sundays, roughly 9am to 6pm. Message us to lock in a slot — weekends fill up in high season.</p>
+            <summary data-i18n="faq_q2">When are you open?</summary>
+            <p data-i18n="faq_a2">Saturdays and Sundays, roughly 9am to 6pm. Message us to lock in a slot — weekends fill up in high season.</p>
           </details>
           <details>
-            <summary>Where do we meet?</summary>
-            <p>We're at Bucutiweg in Oranjestad, Aruba. On Google Maps, search for <strong>"Pure Diving Aruba"</strong> — that's our spot. We'll send a pin and parking info when you book.</p>
+            <summary data-i18n="faq_q3">Where do we meet?</summary>
+            <p data-i18n="faq_a3">We're at Bucutiweg in Oranjestad, Aruba. On Google Maps, search for <strong>"Pure Diving Aruba"</strong> — that's our spot. We'll send a pin and parking info when you book.</p>
           </details>
           <details>
-            <summary>What should I bring?</summary>
-            <p>Swimwear, reef-safe sunscreen, a towel, and water. We provide boards, vests, and everything else. Leave phones and valuables on shore or in our dry bag.</p>
+            <summary data-i18n="faq_q4">What should I bring?</summary>
+            <p data-i18n="faq_a4">Swimwear, reef-safe sunscreen, a towel, and water. We provide boards, vests, and everything else. Leave phones and valuables on shore or in our dry bag.</p>
           </details>
           <details>
-            <summary>What if the weather is bad?</summary>
-            <p>Aruba is dry and windy but rarely un-rideable. If conditions aren't safe we reschedule or refund in full — no questions asked.</p>
+            <summary data-i18n="faq_q5">What if the weather is bad?</summary>
+            <p data-i18n="faq_a5">Aruba is dry and windy but rarely un-rideable. If conditions aren't safe we reschedule or refund in full — no questions asked.</p>
           </details>
           <details>
-            <summary>Is there an age or weight limit?</summary>
-            <p>Riders from about age 8 and up. No upper limit — we instruct plenty of adults trying it for the first time. Contact us if you're unsure.</p>
+            <summary data-i18n="faq_q6">Is there an age or weight limit?</summary>
+            <p data-i18n="faq_a6">Riders from about age 8 and up. No upper limit — we instruct plenty of adults trying it for the first time. Contact us if you're unsure.</p>
           </details>
         </div>
       </div>
@@ -302,12 +274,12 @@
     <section class="social">
       <div class="container social-inner">
         <div class="social-copy">
-          <h2>See the latest from the water</h2>
-          <p>Session clips, conditions, and news go up on our Facebook page first — and it's the
+          <h2 data-i18n="social_h2">See the latest from the water</h2>
+          <p data-i18n="social_p">News, conditions, and updates go up on our Facebook page first — and it's the
             quickest way to reach us with a question.</p>
           <div class="hero-cta">
-            <a class="btn btn-primary" href="https://www.facebook.com/297AWS">Open our Facebook page</a>
-            <a class="btn btn-ghost" href="https://www.tripadvisor.com/Attraction_Review-g147248-d3316277-Reviews-Aruba_Wakeboard_School-Oranjestad_Aruba.html">See us on Tripadvisor</a>
+            <a class="btn btn-primary" href="https://www.facebook.com/297AWS" data-i18n="social_fb">Open our Facebook page</a>
+            <a class="btn btn-ghost" href="https://www.tripadvisor.com/Attraction_Review-g147248-d3316277-Reviews-Aruba_Wakeboard_School-Oranjestad_Aruba.html" data-i18n="social_ta">See us on Tripadvisor</a>
           </div>
         </div>
         <div class="fb-embed">
@@ -317,23 +289,26 @@
             style="border:none;overflow:hidden" scrolling="no" frameborder="0"
             allowfullscreen="true"
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-          <p class="fb-note">Feed not showing? <a href="https://www.facebook.com/297AWS">Open it on Facebook →</a></p>
+          <p class="fb-note" data-i18n="fb_note">Feed not showing? <a href="https://www.facebook.com/297AWS">Open it on Facebook →</a></p>
         </div>
       </div>
     </section>
 
     <section class="cta-band" id="book">
       <div class="container cta-inner">
-        <h2>Ready to get on the water?</h2>
-        <p>Send us your dates and we'll confirm a time. The fastest way to reach us is WhatsApp.</p>
+        <h2 data-i18n="cta_h2">Ready to get on the water?</h2>
+        <p data-i18n="cta_p">Send us your dates and we'll confirm a time. The fastest way to reach us is WhatsApp.</p>
         <div class="hero-cta">
-          <a href="https://wa.me/2977313297" class="btn btn-primary btn-lg">WhatsApp +297 731 3297</a>
-          <a href="mailto:arubawakeboardschool@gmail.com" class="btn btn-ghost btn-lg">Email us</a>
+          <a href="https://wa.me/2977313297" class="btn btn-whatsapp btn-lg">
+            <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.892c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 005.71 1.447h.006c6.585 0 11.946-5.335 11.949-11.893a11.821 11.821 0 00-3.495-8.407"/></svg>
+            WhatsApp +297 731 3297
+          </a>
+          <a href="mailto:arubawakeboardschool@gmail.com" class="btn btn-ghost btn-lg" data-i18n="cta_email">Email us</a>
         </div>
         <form class="signup" novalidate>
-          <label for="email" class="visually-hidden">Your email</label>
-          <input type="email" id="email" name="email" placeholder="you@email.com" required />
-          <button type="submit" class="btn btn-primary">Request a callback</button>
+          <label for="email" class="visually-hidden" data-i18n="email_label">Your email</label>
+          <input type="email" id="email" name="email" placeholder="you@email.com" data-i18n-ph="email_ph" required />
+          <button type="submit" class="btn btn-primary" data-i18n="cta_submit">Request a callback</button>
         </form>
         <p class="form-msg" role="status" aria-live="polite"></p>
       </div>
@@ -346,36 +321,44 @@
         <a href="#top" class="brand" aria-label="Aruba Wakeboard School — home">
           <img src="aws-logo.png" alt="Aruba Wakeboard School" class="brand-logo brand-logo-lg" width="305" height="200" />
         </a>
-        <p>The one and only wakeboard school on Aruba. Founded 2008, Oranjestad.</p>
+        <p data-i18n="foot_tagline">The one and only wakeboard school on Aruba. Founded 2008, Oranjestad.</p>
       </div>
       <nav class="footer-cols" aria-label="Footer">
         <div>
-          <h4>Explore</h4>
-          <a href="#lessons">Lessons</a>
-          <a href="#photos">Photos</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#pricing">Pricing</a>
+          <h4 data-i18n="foot_explore">Explore</h4>
+          <a href="#lessons" data-i18n="nav_lessons">Lessons</a>
+          <a href="#how" data-i18n="nav_how">How it works</a>
+          <a href="#reviews" data-i18n="nav_reviews">Reviews</a>
+          <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
         </div>
         <div>
-          <h4>Contact</h4>
+          <h4 data-i18n="foot_contact">Contact</h4>
           <a href="https://wa.me/2977313297">WhatsApp +297 731 3297</a>
           <a href="mailto:arubawakeboardschool@gmail.com">arubawakeboardschool@gmail.com</a>
           <a href="tel:+2977313297">Call +297 731 3297</a>
-          <a href="https://www.facebook.com/297AWS">Facebook</a>
+          <div class="socials">
+            <a href="https://www.facebook.com/297AWS" class="social-link" aria-label="Aruba Wakeboard School on Facebook" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/arubawakeboardschool" class="social-link" aria-label="Aruba Wakeboard School on Instagram" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 01-1.38-.9 3.72 3.72 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.12 1.38A5.86 5.86 0 00.63 4.14c-.3.76-.5 1.64-.56 2.9C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.12.66.66 1.33 1.08 2.12 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.86 5.86 0 002.12-1.38 5.86 5.86 0 001.38-2.12c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 00-1.38-2.12A5.86 5.86 0 0019.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 005.84 12 6.16 6.16 0 0012 18.16 6.16 6.16 0 0018.16 12 6.16 6.16 0 0012 5.84zM12 16a4 4 0 110-8 4 4 0 010 8zm6.41-10.85a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
+            </a>
+          </div>
         </div>
         <div>
-          <h4>Find us</h4>
+          <h4 data-i18n="foot_findus">Find us</h4>
           <a href="https://www.google.com/maps/search/?api=1&amp;query=Pure+Diving+Aruba">Bucutiweg, Oranjestad</a>
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=Pure+Diving+Aruba">"Pure Diving Aruba" on Maps</a>
-          <span>Open Sat &amp; Sun, 9am–6pm</span>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Pure+Diving+Aruba" data-i18n="foot_maps2">"Pure Diving Aruba" on Maps</a>
+          <span data-i18n="foot_hours">Open Sat &amp; Sun, 9am–6pm</span>
         </div>
       </nav>
     </div>
     <div class="container footer-bottom">
-      <p>© <span id="year"></span> Aruba Wakeboard School (AWS). All rights reserved.</p>
+      <p>© <span id="year"></span> <span data-i18n="foot_rights">Aruba Wakeboard School (AWS). All rights reserved.</span></p>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

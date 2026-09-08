@@ -3,13 +3,6 @@
 // Current year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Gallery: when a real photo exists for a tile, drop the "photo here" placeholder look.
-document.querySelectorAll('.shot').forEach((tile, i) => {
-  const probe = new Image();
-  probe.onload = () => tile.classList.add('has-photo');
-  probe.src = `images/ride-${i + 1}.jpg`;
-});
-
 // Mobile nav toggle
 const header = document.querySelector('.site-header');
 const toggle = document.querySelector('.nav-toggle');
@@ -23,6 +16,21 @@ toggle.addEventListener('click', (e) => {
   e.stopPropagation();
   const open = header.classList.toggle('open');
   toggle.setAttribute('aria-expanded', String(open));
+});
+
+// Clicking the AWS logo (header or footer) scrolls back to the top
+document.querySelectorAll('.brand').forEach((brand) => {
+  brand.addEventListener('click', (e) => {
+    e.preventDefault();
+    closeMenu();
+    header.classList.remove('hide');
+    if ('scrollBehavior' in document.documentElement.style) {
+      const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  });
 });
 
 // Close the menu on a tap anywhere outside it, on Escape, or after picking a link
@@ -46,6 +54,12 @@ let scrollQueued = false;
 function updateHeader() {
   const y = Math.max(window.scrollY, 0);
   const dy = y - lastY;
+  // Ignore the scroll blip caused by a language switch — keep the menu open.
+  if (Date.now() - (window.__awsLangChangedAt || 0) < 900) {
+    lastY = y;
+    scrollQueued = false;
+    return;
+  }
   if (Math.abs(dy) > 4) closeMenu();
   if (y <= 8) {
     header.classList.remove('hide');       // always show at the very top
@@ -74,14 +88,16 @@ form.addEventListener('submit', (e) => {
   const email = form.email.value.trim();
   const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
+  const t = window.awsT || ((k) => k);
+
   if (!valid) {
-    msg.textContent = 'Please enter a valid email address.';
+    msg.textContent = t('form_invalid');
     msg.style.color = '#ffe08a';
     form.email.focus();
     return;
   }
 
-  msg.textContent = `Thanks! We'll get back to ${email} to sort out a time.`;
+  msg.textContent = t('form_thanks').replace('{email}', email);
   msg.style.color = '#ffffff';
   form.reset();
 });

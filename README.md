@@ -6,14 +6,15 @@ A static, single-page site for Aruba Wakeboard School in Oranjestad. No build st
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Page structure and all copy |
+| `index.html` | Page structure and all copy (English source text, with `data-i18n` keys) |
 | `styles.css` | Styling. Ocean color theme in `:root` at the top |
-| `script.js` | Mobile nav, callback-form validation, scroll reveal |
+| `script.js` | Mobile nav, back-to-top logo, hide-on-scroll header, form validation |
+| `i18n.js` | English / Dutch / Spanish translations + the language switcher logic |
 | `aws-logo.png` | Logo in the header and footer — white AWS badge, cropped from the source PNG |
 | `logo background-Photoroom.png` | Original full-bleed logo art (kept as the source) |
 | `favicon.png` | Browser-tab / apple-touch icon: white logo on a teal square |
 | `hero.jpg` | Background photo for the hero section (top of the page) |
-| `images/` | Drop `ride-1.jpg` … `ride-6.jpg` here for the gallery (see `images/README.md`) |
+| `image1.1.png` | Source for `hero.jpg` (kept for re-exporting) |
 
 The logo art is white with a transparent background; `.brand-logo` in `styles.css` applies
 `filter: brightness(0)` to render it solid black in the header and footer. Drop that filter
@@ -48,18 +49,17 @@ and web search) and the client:
 
 ## Photos & social content
 
-The Facebook page (`facebook.com/297AWS`) is behind a login wall and Tripadvisor's traveller
-photos belong to the people who took them, so neither could be copied directly. Instead:
+AWS does **not** offer photos or videos of your session as a service — the site is written
+so it never implies otherwise. There is no photo gallery section.
 
 - **"See the latest from the water"** embeds the official Facebook Page plugin — it shows the
-  page's real posts and photos live, and updates itself. It only renders on a real domain
-  (not from `file://`), and needs the visitor to be able to reach facebook.com.
-- **"On the water"** is a 6-tile gallery. Each tile shows a gradient until you add the
-  matching `images/ride-N.jpg` — see `images/README.md`.
+  page's real posts live and updates itself. It only renders on a real domain (not from
+  `file://`) and needs the visitor to be able to reach facebook.com.
 - The review quotes bring in the Tripadvisor social proof properly (short, attributed).
 - **Hero photo:** `hero.jpg` (the aerial dock shot) sits behind the top of the page under a
-  dark wash so the white text stays readable. The current file is only ~550px wide, so it
-  looks soft on large screens — replace it with a ~2000px version when you have one.
+  dark wash so the white text stays readable. It's 1400px wide, JPG-compressed to ~415 KB
+  from the source `image1.1.png`. To swap it, drop a new `hero.jpg` in (or re-export from a
+  new source: `sips -s format jpeg -s formatOptions 55 -Z 1400 SOURCE --out hero.jpg`).
 
 ## Still to verify / replace
 
@@ -67,7 +67,6 @@ photos belong to the people who took them, so neither could be copied directly. 
 - The **"3-Session Pack" at $135** is an assumed bundle — adjust or remove it.
 - The **callback form** only validates the email. Wire it to a real endpoint (e.g. Formspree)
   in `script.js`, or remove it and rely on the WhatsApp / email buttons.
-- **Add gallery photos** to `images/` (your own, or from your Facebook page).
 - Add a proper embedded Google Map.
 
 ## Customize
@@ -82,6 +81,20 @@ photos belong to the people who took them, so neither could be copied directly. 
   to close it. Checked for horizontal overflow down to 360px wide.
 - The header hides when you scroll down and slides back when you scroll up; it's always
   shown at the very top of the page (`.site-header.hide` toggled from `script.js`).
+
+## Languages
+
+The site ships in **English (default), Dutch and Spanish**. The switcher (EN / NL / ES) lives
+in the top-right menu — the header bar on desktop, the dropdown panel on mobile.
+
+- First-time visitors always get English; there's no browser-language auto-detect.
+- A visitor's choice is remembered in `localStorage` (`aws-lang`) for their next visit.
+- All copy lives in `i18n.js` as three dictionaries keyed by the same string ids. To edit
+  wording, change the English string in `i18n.js` (not `index.html`) and the matching NL/ES
+  strings. To add a translatable element in `index.html`, give it `data-i18n="some_key"`
+  (or `data-i18n-ph` / `data-i18n-al` for a placeholder / aria-label) and add `some_key` to
+  all three dictionaries.
+- The review quotes are translated too — they were already trimmed paraphrases, not verbatim.
 
 ## Deploy
 
