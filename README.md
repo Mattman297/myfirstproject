@@ -10,11 +10,13 @@ A static, single-page site for Aruba Wakeboard School in Oranjestad. No build st
 | `styles.css` | Styling. Ocean color theme in `:root` at the top |
 | `script.js` | Mobile nav, back-to-top logo, hide-on-scroll header, form validation |
 | `i18n.js` | English / Dutch / Spanish translations + the language switcher logic |
-| `aws-logo.png` | Logo in the header and footer — white AWS badge, cropped from the source PNG |
-| `logo background-Photoroom.png` | Original full-bleed logo art (kept as the source) |
-| `favicon.png` | Browser-tab / apple-touch icon: white logo on a teal square |
+| `aws-logo.png` | Logo in the header and footer — white AWS badge on transparent |
+| `favicon.png` | Browser-tab / apple-touch icon: white AWS logo on a black square (180×180) |
 | `hero.jpg` | Background photo for the hero section (top of the page) |
-| `image1.1.png` | Source for `hero.jpg` (kept for re-exporting) |
+
+The original full-size design files (logo art, hi-res hero photo) are not kept in the working
+tree, but they're still in git history — e.g. `git checkout 83ab98d -- image1.1.png` restores
+the uncompressed hero source. Anything under `sources/` is git-ignored if you re-add it.
 
 The logo art is white with a transparent background; `.brand-logo` in `styles.css` applies
 `filter: brightness(0)` to render it solid black in the header and footer. Drop that filter
@@ -58,8 +60,8 @@ so it never implies otherwise. There is no photo gallery section.
 - The review quotes bring in the Tripadvisor social proof properly (short, attributed).
 - **Hero photo:** `hero.jpg` (the aerial dock shot) sits behind the top of the page under a
   dark wash so the white text stays readable. It's 1400px wide, JPG-compressed to ~415 KB
-  from the source `image1.1.png`. To swap it, drop a new `hero.jpg` in (or re-export from a
-  new source: `sips -s format jpeg -s formatOptions 55 -Z 1400 SOURCE --out hero.jpg`).
+  from a hi-res original. To swap it, drop a new `hero.jpg` in (or re-export from a new
+  source: `sips -s format jpeg -s formatOptions 55 -Z 1400 SOURCE --out hero.jpg`).
 
 ## Still to verify / replace
 
