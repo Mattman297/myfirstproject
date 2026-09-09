@@ -42,7 +42,7 @@ and web search) and the client:
 - **Hours:** Saturday & Sunday (sources disagree on 9–6 vs 10–6; page says ~9am–6pm)
 - **Sessions:** 30 minutes, $50 per person
 - **Boat:** MasterCraft X-Star
-- **Also offered:** waterski, wakeskate, kneeboard, barefoot, hydrofoil
+- **Wakeboarding only** — the school is specialised in wakeboarding and does not offer other water sports.
 - **Reviews:** 5.0 from ~118 reviews on Tripadvisor. The four quotes in the "Riders love it
   here" section are real, lightly trimmed reviews (kocoland, Cincyxile, Frog900, Anais M.),
   attributed by username + city as Tripadvisor shows them.
