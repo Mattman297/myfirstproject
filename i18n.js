@@ -1,5 +1,5 @@
 // Aruba Wakeboard School — language switcher (English / Nederlands / Español).
-// English is the default; a visitor's choice is remembered in localStorage.
+// The site always opens in English; the switcher changes it for the current visit only.
 
 const AWS_LANGS = ['en', 'nl', 'es'];
 const AWS_DEFAULT_LANG = 'en';
@@ -377,14 +377,6 @@ const AWS_I18N = {
 
 let awsLang = AWS_DEFAULT_LANG;
 
-function awsGetSavedLang() {
-  try {
-    const saved = localStorage.getItem('aws-lang');
-    if (saved && AWS_LANGS.indexOf(saved) !== -1) return saved;
-  } catch (e) {}
-  return AWS_DEFAULT_LANG;
-}
-
 // Slide the black pill behind the active language button.
 function awsPositionThumb(animate) {
   document.querySelectorAll('.lang-switch').forEach((sw) => {
@@ -431,8 +423,6 @@ function awsApplyLang(lang, animate) {
     b.classList.toggle('is-active', on);
   });
   awsPositionThumb(animate);
-
-  try { localStorage.setItem('aws-lang', lang); } catch (e) {}
 }
 
 // Expose a tiny translator for script.js (form messages etc.)
@@ -457,4 +447,4 @@ if (window.ResizeObserver) {
 }
 window.addEventListener('resize', () => awsPositionThumb(false));
 
-awsApplyLang(awsGetSavedLang(), false);
+awsApplyLang(AWS_DEFAULT_LANG, false);
